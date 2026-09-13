@@ -1,0 +1,35 @@
+{
+  "name": "crm360",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CRM360 is a customer relationship management platform for small and mid-sized sales teams.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node --watch server/server.js",
+    "dev:memory": "node server/scripts/devMemory.js",
+    "dev:client": "npm --prefix client run dev",
+    "start": "node server/server.js",
+    "seed": "node server/scripts/seed.js",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "install:all": "npm install && npm --prefix client install"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0",
+    "nodemailer": "^7.0.3",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "mongodb-memory-server": "^10.1.4"
+  }
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="CRM360 is a customer relationship management platform for growing sales teams." />
+    <meta name="theme-color" content="#fbfbfa" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>CRM360</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("crm360.theme") || "system";
+          var dark = t === "dark" || (t === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.dataset.theme = dark ? "dark" : "light";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -4,6 +4,8 @@ CRM360 is a customer relationship management platform for small and mid-sized sa
 
 Built with the MERN stack: MongoDB, Express, React and Node.js.
 
+**Live demo:** https://majorprojectwebdev.vercel.app
+
 ## Features
 
 **Authentication**
